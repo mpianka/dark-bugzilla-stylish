@@ -20,17 +20,6 @@ table.edit_form th {
     font-size: 12pt;
 }
 
-/* kolory bugów */
-#static_bug_status 
-
-/*
-.bugtype__new { color: #f5b7b1 }
-.bugtype__resolved { color: #28b463 }
-.bugtype__reopened { color: #ba4a00 }
-.bugtype__assigned { color: #48c9b0 }
-.bugtype__distributed { color: #145a32 }
-*/
-
 /* nagłówki */
 .bz_alias_short_desc_container, 
 .bz_comment_head, .bz_first_comment_head {
