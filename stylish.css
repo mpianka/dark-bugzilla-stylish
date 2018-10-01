@@ -21,12 +21,15 @@ table.edit_form th {
 }
 
 /* kolory bugów */
+#static_bug_status 
+
+/*
 .bugtype__new { color: #f5b7b1 }
 .bugtype__resolved { color: #28b463 }
 .bugtype__reopened { color: #ba4a00 }
 .bugtype__assigned { color: #48c9b0 }
 .bugtype__distributed { color: #145a32 }
-
+*/
 
 /* nagłówki */
 .bz_alias_short_desc_container, 
@@ -43,10 +46,11 @@ table.edit_form th {
     font-size: 12pt;
     font-weight: bold;
     text-decoration: none;
+    color: #f1c40f !important;
 }
-.email__softax { color: #2e86c1 !important; }
-.email__client { color: #f1c40f !important; }
-.email__bot { color: #fff !important; }
+
+.bz_comment_user a[href$="@softax.pl"], .bz_comment_user a[href$="@softax.com.pl"] { color: #2e86c1 !important; }
+.bz_comment_user a[href$="@softax.local"] { color: #fff !important; }
 
 /* boksy */
 .bz_private, .bz_comment {
