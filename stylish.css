@@ -35,11 +35,10 @@ table.edit_form th {
     font-size: 12pt;
     font-weight: bold;
     text-decoration: none;
-    color: #f1c40f !important;
 }
-
-.bz_comment_user a[href$="@softax.pl"], .bz_comment_user a[href$="@softax.com.pl"] { color: #2e86c1 !important; }
-.bz_comment_user a[href$="@softax.local"] { color: #fff !important; }
+a.email { color: #f1c40f !important; }
+a.email[href$="@softax.pl"], a.email[href$="@softax.com.pl"] { color: #2e86c1 !important; }
+a.email[href$="@softax.local"] { color: #fff !important; }
 
 /* boksy */
 .bz_private, .bz_comment {
