@@ -10,8 +10,11 @@ p, td, th, a, span, b { font-family: 'Open Sans', sans-serif !important; }
 #bugzilla-body a { color: #2e86c1; text-decoration: none; }
 
 /* tabela z listą bugów */
-.bz_buglist .bz_row_odd { background-color: rgba(20, 20, 20, .4); color: #aaa }
-.bz_buglist .bz_row_even { background-color: rgba(20, 20, 20, .8); color: #ddd }
+.bz_buglist .bz_row_odd, .realitems .owner_header { background-color: rgba(20, 20, 20, .4); color: #aaa }
+.bz_buglist .bz_row_even, .zeroitems tr { background-color: rgba(20, 20, 20, .8) !important; color: #ddd }
+td.subtotal { background-color: rgba(10, 10, 10, .2) !important }
+table.tabs td { background-color: rgba(20, 20, 20, .5) !important }
+table.tabs td.selected { background-color: rgba(20, 20, 20, 1) !important }
 
 /* góra */
 ul.links li { color: black }
