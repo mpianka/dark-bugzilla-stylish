@@ -6,7 +6,7 @@ body {
 }
 
 /* font */
-p, td, th, a { font-family: 'Open Sans', sans-serif !important; }
+p, td, th, a, span, b { font-family: 'Open Sans', sans-serif !important; }
 #bugzilla-body a { color: #2e86c1; text-decoration: none; }
 
 /* tabela z listą bugów */
@@ -19,6 +19,10 @@ table.edit_form th {
     display: table-cell; vertical-align: middle; vertical-align: center;
     font-size: 12pt;
 }
+.bz_time_tracking_table th, #attachment_table th, .bz_attach_footer {
+    background-color: rgba(20, 20, 20, .8) !important;
+    color: #ddd !important;
+}
 
 /* nagłówki */
 .bz_alias_short_desc_container, 
@@ -28,7 +32,10 @@ table.edit_form th {
     font-family: 'Open Sans', sans-serif;
 }
 .bz_comment_head a, .bz_first_comment_head a { color: #2e86c1; text-decoration: none }
-.bz_comment_head .bz_hours_worked { color: #aaa; font-style: italic; margin-right: 5px; text-align:right }
+.bz_hours_worked { color: #aaa; font-style: italic; margin-right: 5px; text-align:right }
+.bz_comment_time { color: #888; font-style: italic }
+.bz_comment_time::before { content: '«' }
+.bz_comment_time::after { content: '»' }
 .bz_comment_user_images { display: none }
 .bz_comment_user { margin: 0; }
 .bz_comment_user a {
@@ -37,7 +44,7 @@ table.edit_form th {
     text-decoration: none;
 }
 a.email { color: #f1c40f !important; }
-a.email[href$="@softax.pl"], a.email[href$="@softax.com.pl"] { color: #2e86c1 !important; }
+a.email[href$="@softax.pl"], a.email[href$="@softax.com.pl"] { color: #45aaf2 !important; }
 a.email[href$="@softax.local"] { color: #fff !important; }
 
 /* boksy */
@@ -62,18 +69,53 @@ table.bz_comment_table td:nth-child(2) { display: none }
     line-height: 1.3;
 	font-size: 10pt;
 }
-.bz_comment_text span.quote { color: #aaa; font-style: oblique }
-.bz_comment_text a { color: #2874a6; text-decoration: none }
+.bz_comment_text span.quote { 
+    font-family: "PT Mono", monospace !important;
+    color: #ddd;
+    font-style: oblique
+}
+.bz_comment_text a {
+    color: #2874a6;
+    text-decoration: none;
+    font-family: 'PT Mono', monospace !important
+}
 .bz_comment_text a:hover { text-shadow: 0px 0px 1px #2874a6; }
 .bz_comment_text a:visited { color: #76448a; }
 .bz_comment_text a:visited:hover { text-shadow: 0px 0px 1px #76448a !important }
 
+.bugfields {
+    background-color: rgba(20, 20, 20, .75);
+    border: none
+}
+#bugzilla-body h1 { border-top: 1px solid #2874a6; margin-top: 100px !important; padding-top: 15px; }
+
 /* odpowiedź */
 #add_comment table { margin: 0 auto }
 #bug_status_bottom { margin: 0 !important }
-textarea#comment {
-    background: #222;
-    color: #fff;
-    padding: 5px;
-    line-height: 1.3
+
+/* inputy */
+input, select, textarea {
+    background-color: rgba(0, 0, 0, .5);
+    color: #ccc;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(40, 116, 166, .5);
+    transition: background-color .5s, border .5s;
+    font-family: 'Open Sans', sans-serif !important;
 }
+input:hover, select:hover, textarea:hover {
+    transition: background-color .2s;
+    background-color: rgba(22, 70, 102, .3)
+}
+input:active, input:focus, select:active, select:focus, textarea:active, textarea:focus {
+    transition: border .2s;
+    border: 1px solid rgba(40, 116, 166, 1);
+}
+
+textarea#comment {
+    padding: 8px 0; margin: 10px 0;
+    line-height: 1.3;
+    font: 10pt "PT Mono", monospace !important;
+}
+
